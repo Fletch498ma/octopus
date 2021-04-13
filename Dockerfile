@@ -7,7 +7,7 @@ RUN apk add python3 python3-dev
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
 # if this is called "PIP_VERSION", pip explodes with "ValueError: invalid truth value '<VERSION>'"
-ENV PYTHON_PIP_VERSION 20.0.2
+ENV PYTHON_PIP_VERSION 21.0.1
 # https://github.com/pypa/get-pip
 ENV PYTHON_GET_PIP_URL https://github.com/pypa/get-pip/raw/42ad3426cb1ef05863521d7988d5f7fec0c99560/get-pip.py
 ENV PYTHON_GET_PIP_SHA256 da288fc002d0bb2b90f6fbabc91048c1fa18d567ad067ee713c6e331d3a32b45
