@@ -42,7 +42,7 @@ RUN apk add build-base
 RUN pip install --no-cache-dir --disable-pip-version-check pyserial
 RUN pip install --no-cache-dir --disable-pip-version-check crc16
 RUN pip install --no-cache-dir --disable-pip-version-check pandas
-RUN pip install --no-cache-dir --disable-pip-version-check opencv-python 4.2.0.34
+RUN pip install --no-cache-dir --disable-pip-version-check opencv-python==4.2.0.34
 
 RUN apk add --no-cache libffi-dev openssl-dev
 RUN pip install --no-cache-dir --disable-pip-version-check autobahn
