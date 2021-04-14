@@ -29,6 +29,10 @@ RUN node --version && \
 	python --version && \
 	pip --version
 
+RUN apk add --update \
+	cargo \
+	rust 
+	
 RUN apk add py3-numpy py3-numpy-dev py3-scipy 
 RUN apk add py3-twisted
 RUN apk add py3-cryptography py3-asn1 py3-bcrypt
