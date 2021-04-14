@@ -32,7 +32,8 @@ RUN node --version && \
 RUN apk add --update \
 	cargo \
 	rust \
-	cmake 
+	cmake \
+	ninja-build
 	
 RUN apk add py3-numpy py3-numpy-dev py3-scipy 
 RUN apk add py3-twisted
