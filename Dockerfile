@@ -61,7 +61,6 @@ COPY rollup.config.js .
 COPY octopus/ ./octopus/
 RUN ./node_modules/.bin/rollup -c
 
-ADD octopus-plugins/ /src/
 COPY plugins/ .devcontainer/noop.txt /src/octopus-plugins/ 
 COPY tools/ ./tools/
 
