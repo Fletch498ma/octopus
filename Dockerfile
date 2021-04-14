@@ -61,7 +61,7 @@ COPY rollup.config.js .
 COPY octopus/ ./octopus/
 RUN ./node_modules/.bin/rollup -c
 
-COPY plugins/ .devcontainer/noop.txt /src/octopus-plugins/
+COPY twisted/plugins/ .devcontainer/noop.txt /src/octopus-plugins/ #was missing 'twisted' directory in 'twisted/plugins'
 COPY tools/ ./tools/
 
 RUN python tools/install_plugins.py /src/octopus-plugins /usr/lib/python3.8/site-packages
