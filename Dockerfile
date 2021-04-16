@@ -32,49 +32,17 @@ RUN node --version && \
 RUN apk add --update \
 	cargo \
 	rust 
-
-RUN apk add --update \
-    build-base \
-    clang \
-    clang-dev ninja \
-    cmake \
-    freetype-dev \
-    g++ \
-    jpeg-dev \
-    lcms2-dev \
-    libffi-dev \
-    libgcc \
-    libxml2-dev \
-    libxslt-dev \
-    linux-headers \
-    make \
-    musl \
-    musl-dev \
-    openjpeg-dev \
-    openssl-dev \
-    python3-dev \
-    zlib-dev \
-    && apk add \
-    curl \
-    freetype \
-    gcc \
-    jpeg \
-    libjpeg \
-    openjpeg \
-    python3 \
-    tesseract-ocr \
-    zlib
     
 RUN apk add py3-numpy py3-numpy-dev py3-scipy 
 RUN apk add py3-twisted
 RUN apk add py3-cryptography py3-asn1 py3-bcrypt
 RUN apk add py3-xlsxwriter
+RUN apk add opencv-python
 
 RUN apk add build-base
 RUN pip install --no-cache-dir --disable-pip-version-check pyserial
 RUN pip install --no-cache-dir --disable-pip-version-check crc16
 RUN pip install --no-cache-dir --disable-pip-version-check pandas
-RUN pip install --no-cache-dir --disable-pip-version-check opencv-python
 
 RUN apk add --no-cache libffi-dev openssl-dev
 RUN pip install --no-cache-dir --disable-pip-version-check autobahn
