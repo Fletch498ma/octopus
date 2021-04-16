@@ -37,7 +37,7 @@ RUN apk add py3-numpy py3-numpy-dev py3-scipy
 RUN apk add py3-twisted
 RUN apk add py3-cryptography py3-asn1 py3-bcrypt
 RUN apk add py3-xlsxwriter
-RUN apk add py3-opencv-python
+RUN apk add opencv
 
 RUN apk add build-base
 RUN pip install --no-cache-dir --disable-pip-version-check pyserial
